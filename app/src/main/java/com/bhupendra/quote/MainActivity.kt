@@ -1,4 +1,4 @@
-package com.bhupendra.quote.view
+package com.bhupendra.quote
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -17,11 +17,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.bhupendra.quote.R
 import com.bhupendra.quote.utils.category
 import com.bhupendra.quote.utils.details
-import com.bhupendra.quote.view.screens.CategoryScreen
-import com.bhupendra.quote.view.screens.DetailScreen
+import com.bhupendra.quote.screens.CategoryScreen
+import com.bhupendra.quote.screens.DetailScreen
 import com.bhupendra.quote.theme.QuoteTheme
 import dagger.hilt.android.AndroidEntryPoint
 

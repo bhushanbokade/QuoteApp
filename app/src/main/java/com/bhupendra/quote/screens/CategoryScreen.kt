@@ -1,4 +1,4 @@
-package com.bhupendra.quote.view.screens
+package com.bhupendra.quote.screens
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable

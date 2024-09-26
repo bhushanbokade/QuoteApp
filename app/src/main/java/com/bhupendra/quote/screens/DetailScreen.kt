@@ -1,4 +1,4 @@
-package com.bhupendra.quote.view.screens
+package com.bhupendra.quote.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
