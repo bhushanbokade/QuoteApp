@@ -86,4 +86,5 @@ dependencies {
     // mockk
     testImplementation "io.mockk:mockk:$mocck_version"
     testImplementation "io.mockk:mockk-agent-jvm:$mocck_version"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
 }
