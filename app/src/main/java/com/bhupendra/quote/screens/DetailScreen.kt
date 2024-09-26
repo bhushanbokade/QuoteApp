@@ -22,7 +22,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.bhupendra.quote.R
 import com.bhupendra.quote.viewmodels.DetailViewModel
 
-@Preview
 @Composable
 fun DetailScreen() {
     val detailViewModel: DetailViewModel = hiltViewModel()
@@ -58,3 +57,12 @@ fun QuoteListItem(tweet: String) {
             )
         })
 }
+
+@Preview
+@Composable
+fun DetailsPreview() {
+    DetailScreen()
+}
+
+
+

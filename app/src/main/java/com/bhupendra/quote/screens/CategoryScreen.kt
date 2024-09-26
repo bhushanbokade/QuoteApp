@@ -19,10 +19,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.bhupendra.quote.R
 import com.bhupendra.quote.utils.categoryList
-
 
 @Composable
 fun CategoryScreen(onClick: (category: String) -> Unit) {
@@ -65,6 +65,12 @@ fun CategoryItem(category: String, onClick: (category: String) -> Unit) {
             style = MaterialTheme.typography.body1
         )
     }
+}
+
+@Preview
+@Composable
+fun CategoryPreview() {
+    CategoryScreen(onClick = {})
 }
 
 
