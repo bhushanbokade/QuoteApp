@@ -1,6 +1,7 @@
+package com.bhupendra.quote.repository
+
 import com.bhupendra.quote.api.QuoteAPI
 import com.bhupendra.quote.models.QuoteListItem
-import com.bhupendra.quote.repository.QuoteRepository
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.flow.first
