@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bhupendra.quote.models.QuoteListItem
 import com.bhupendra.quote.repository.QuoteRepository
+import com.bhupendra.quote.utils.category
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -20,7 +21,7 @@ class DetailViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            val category = savedStateHandle.get<String>("category") ?: ""
+            val category = savedStateHandle.get<String>(category) ?: ""
             repository.getQuotes(category)
         }
     }
