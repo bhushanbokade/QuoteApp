@@ -17,11 +17,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.bhupendra.quote.utils.category
-import com.bhupendra.quote.utils.details
 import com.bhupendra.quote.screens.CategoryScreen
 import com.bhupendra.quote.screens.DetailScreen
 import com.bhupendra.quote.theme.QuoteTheme
+import com.bhupendra.quote.utils.category
+import com.bhupendra.quote.utils.details
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
