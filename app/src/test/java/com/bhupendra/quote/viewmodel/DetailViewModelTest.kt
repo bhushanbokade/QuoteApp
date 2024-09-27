@@ -34,29 +34,32 @@ class DetailViewModelTest {
     @Test
     @ExperimentalCoroutinesApi
     fun testEmptyQuotes() {
+        //Given
         val testQuotes = MutableStateFlow<List<QuoteListItem>>(emptyList())
-
         every { repository.quotes } returns testQuotes
 
+        //When
         viewModel = DetailViewModel(repository, savedStateHandle)
 
+        //Then
         assertEquals(testQuotes, viewModel.quotes)
     }
 
     @Test
     @ExperimentalCoroutinesApi
     fun testQuotes() {
+        //Given
         val mockQuotes = listOf(
             QuoteListItem(category, "Android Quote 1"),
             QuoteListItem(category, "Android Quote 2")
         )
-
         val testQuotes = MutableStateFlow(mockQuotes)
-
         every { repository.quotes } returns testQuotes
 
+        //When
         viewModel = DetailViewModel(repository, savedStateHandle)
 
+        //then
         assertEquals(testQuotes, viewModel.quotes)
     }
 }

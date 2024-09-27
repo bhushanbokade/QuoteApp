@@ -24,6 +24,7 @@ class QuoteRepositoryTest {
 
     @Test
     fun testGetQuotes() = runBlocking {
+        //Given
         val category = "Android"
         val mockQuotes = listOf(
             QuoteListItem(category, "Android Quote 1"),
@@ -35,22 +36,27 @@ class QuoteRepositoryTest {
         coEvery { mockResponse.isSuccessful } returns true
         coEvery { mockResponse.body() } returns mockQuotes
 
+        //When
         quoteRepository.getQuotes(category)
 
+        //Then
         val emittedQuotes = quoteRepository.quotes.first()
         assertEquals(mockQuotes, emittedQuotes)
     }
 
     @Test
     fun testGetEmptyQuote() = runBlocking {
+        //Given
         val category = "android"
         val mockResponse = mockk<Response<List<QuoteListItem>>>()
 
         coEvery { quoteAPI.getQuotes(any()) } returns mockResponse
         coEvery { mockResponse.isSuccessful } returns false
 
+        //When
         quoteRepository.getQuotes(category)
 
+        //Then
         val emittedQuotes = quoteRepository.quotes.first()
         assertEquals(emptyList<QuoteListItem>(), emittedQuotes)
     }

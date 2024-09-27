@@ -61,7 +61,7 @@ fun QuoteListItem(tweet: String) {
 @Preview
 @Composable
 fun DetailsPreview() {
-    DetailScreen()
+    QuoteListItem(stringResource(id = R.string.app_name))
 }
 
 
